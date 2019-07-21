@@ -25,7 +25,7 @@ servers = {"jay1":"jay1.clan-fa.com:27960",
 
           
 # Please insert into the toLaunch table the servers that you want to launch
-toLaunch = ["jay1"]
+toLaunch = ["jay2","silent1","hc","nq1"]
 
 # To launch all, use this above :
 #toLaunch = [key for key in servers.keys()]
@@ -34,10 +34,14 @@ toLaunch = ["jay1"]
 ## Script            
 ##############################################################
 
-import subprocess
+from subprocess import Popen, PIPE
+import sys
+
 program='ET.exe'
 
-for server in toLaunch :
-    if server in servers.keys():
-        arguments={"+connect "+servers[server]}
-        subprocess.call([program, arguments])
+if __name__ == '__main__':
+    for server in toLaunch :
+        if server in servers.keys():
+            arguments={"+connect "+servers[server]}
+            Popen([program, arguments], stderr=PIPE)
+    sys.exit()
