@@ -34,9 +34,9 @@ toLaunch = ["jay1"]
 ##############################################################
 
 import subprocess
-program='ET.exe'
+program='C:\Program Files (x86)\Wolfenstein - Enemy Territory\ET.exe'
 
 for server in toLaunch :
-    if server in toLaunch.keys():
-        arguments={"+connect "+toLaunch[server])
+    if server in servers.keys():
+        arguments={"+connect "+servers[server]}
         subprocess.call([program, arguments])
