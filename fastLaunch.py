@@ -34,7 +34,7 @@ toLaunch = ["jay1"]
 ##############################################################
 
 import subprocess
-program='C:\Program Files (x86)\Wolfenstein - Enemy Territory\ET.exe'
+program='ET.exe'
 
 for server in toLaunch :
     if server in servers.keys():
